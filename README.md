@@ -322,7 +322,8 @@ curl -X POST http://localhost:8080/api/process   -H "Authorization: Bearer <toke
 ## 🧱 Author
 
 Developed with ❤️ by Oleksandr Chernetskyi  
-📧 Example: oleksandr0chernetskyi@gmail.com
+📧 Email: oleksandr0chernetskyi@gmail.com
+
 📅 October 2025
 
 ---
