@@ -1,0 +1,26 @@
+
+<configuration>
+
+    <!-- ===== Appender для консолі (кольоровий і читабельний формат) ===== -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- %highlight підсвічує кольорами рівні логів -->
+            <pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) [%thread] %cyan(logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ===== Прибрані зайві логи від Hibernate та Spring ===== -->
+    <logger name="org.hibernate.SQL" level="WARN"/>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="WARN"/>
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.testcontainers" level="WARN"/>
+
+    <!-- ===== Код рівня DEBUG, щоб бачити логи ===== -->
+    <logger name="authapi.servicea" level="DEBUG"/>
+
+    <!-- ===== Глобальний рівень логування ===== -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
