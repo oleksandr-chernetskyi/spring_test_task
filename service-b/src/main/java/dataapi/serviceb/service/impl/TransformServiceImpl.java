@@ -9,7 +9,11 @@ import org.springframework.stereotype.Service;
 public class TransformServiceImpl implements TransformService {
     @Override
     public TransformResponseDto transformResponseDto(TransformRequestDto transformRequestDto) {
-        String result = new StringBuilder(transformRequestDto.getText().toUpperCase()).reverse().toString();
+        String result = new StringBuilder(transformRequestDto
+                .getText()
+                .toUpperCase())
+                .reverse()
+                .toString();
         return new TransformResponseDto(result);
     }
 }
