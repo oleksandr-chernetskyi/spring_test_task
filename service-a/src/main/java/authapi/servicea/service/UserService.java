@@ -7,7 +7,7 @@ import authapi.servicea.model.User;
 
 public interface UserService {
     UserResponseDto register(UserRegistrationRequestDto registrationRequestDto)
-        throws RegistrationException;
+            throws RegistrationException;
 
     User getAuthenticatedUser();
 }

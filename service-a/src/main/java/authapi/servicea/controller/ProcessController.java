@@ -20,10 +20,12 @@ public class ProcessController {
     private final ProcessService processService;
 
     @PostMapping
-    public ProcessResponseDto process(@RequestBody @Valid ProcessRequestDto requestDto,
+    public ProcessResponseDto process(
+            @RequestBody @Valid ProcessRequestDto requestDto,
                                       Authentication authentication) {
         String email = authentication.getName();
-        log.info("Received process request from user: {} with text: {}", email, requestDto.getText());
+        log.info("Received process request from user: {} with text: {}",
+                email, requestDto.getText());
         return processService.processText(requestDto, email);
     }
 }

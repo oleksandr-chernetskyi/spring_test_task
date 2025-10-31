@@ -11,7 +11,6 @@ import authapi.servicea.exception.RegistrationException;
 import authapi.servicea.mapper.UserMapper;
 import authapi.servicea.model.User;
 import authapi.servicea.repository.UserRepository;
-import authapi.servicea.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -95,9 +94,4 @@ class UserServiceImplTest {
         verify(userRepository).findByEmail(userRegistrationRequestDto.getEmail());
         verify(userRepository, never()).save(any());
     }
-
-
-
-
-
 }

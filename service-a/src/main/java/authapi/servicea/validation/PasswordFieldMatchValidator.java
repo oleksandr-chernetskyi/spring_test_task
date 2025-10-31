@@ -5,7 +5,8 @@ import jakarta.validation.ConstraintValidatorContext;
 import java.util.Objects;
 import org.springframework.beans.BeanWrapperImpl;
 
-public class PasswordFieldMatchValidator implements ConstraintValidator<PasswordFieldMatch, Object> {
+public class PasswordFieldMatchValidator
+        implements ConstraintValidator<PasswordFieldMatch, Object> {
     private String field;
     private String fieldMatch;
 
@@ -15,7 +16,8 @@ public class PasswordFieldMatchValidator implements ConstraintValidator<Password
     }
 
     @Override
-    public boolean isValid(Object value, ConstraintValidatorContext constraintValidatorContext) {
+    public boolean isValid(Object value,
+                           ConstraintValidatorContext constraintValidatorContext) {
         Object fieldValue = new BeanWrapperImpl(value)
                 .getPropertyValue(field);
         Object fieldMatchValue = new BeanWrapperImpl(value)

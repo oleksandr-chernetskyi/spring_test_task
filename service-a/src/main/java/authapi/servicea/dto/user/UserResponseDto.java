@@ -1,7 +1,7 @@
 package authapi.servicea.dto.user;
 
-import lombok.Data;
 import java.util.UUID;
+import lombok.Data;
 
 @Data
 public class UserResponseDto {
